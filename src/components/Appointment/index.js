@@ -14,13 +14,16 @@ export default function Appointment({ data, onCancel }) {
     });
   }, [data.date]);
 
+  // Just a URL to show avatar in mobile emulator (Android Genymotion)
+  // const testUrl = data.provider.avatar.url.replace('localhost', '10.0.3.2');
+
   return (
     <Container past={data.past}>
       <Left>
         <Avatar
           source={{
             uri: data.provider.avatar
-              ? data.provider.avatar.url
+              ? data.provider.avatar.url.replace('localhost', '192.168.1.64')
               : `https://api.adorable.io/avatar/50/${data.provider.name}.png`,
           }}
         />

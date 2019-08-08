@@ -21,6 +21,7 @@ export const Left = styled.View`
 `;
 
 export const Avatar = styled.Image`
+  background: #000;
   width: 50px;
   height: 50px;
   border-radius: 25px;
